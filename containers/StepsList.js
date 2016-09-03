@@ -6,6 +6,15 @@ const mapStateToProps = (state) => {
   return state.currentRecipe;
 }
 
-let StepsList = connect(mapStateToProps)(StepsListView)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSubmit: (step) => {
+      dispatch(addStep(step))
+      console.log(this.context.redux.getState())
+    }
+  }
+}
+
+let StepsList = connect(mapStateToProps, mapDispatchToProps)(StepsListView)
 
 export default StepsList

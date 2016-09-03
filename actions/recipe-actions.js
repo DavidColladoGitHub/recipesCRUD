@@ -9,9 +9,10 @@ export const addRecipe = (name, steps, ingredients) => {
   }
 }
 
-export const addIngredient = (ingredient) => {
+export const addIngredient = (name, quantity) => {
   return {
     type: 'ADD_INGREDIENT',
-    ingredients,
+    name,
+    quantity,
   }
 }
