@@ -2,10 +2,14 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import recipe from './reducers'
+import recipe from './reducers/recipe-reducer'
 import App from './components/App'
+import data from './mockData'
 
-let store = createStore(recipeApp)
+let store = createStore(recipe)
+
+data(store);
+
 
 render(
   <Provider store={store}>

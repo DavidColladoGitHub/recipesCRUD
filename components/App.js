@@ -1,10 +1,10 @@
 import React from 'react'
-import RecipeList from './RecipeList'
+import VisibleRecipeList from '../containers/VisibleRecipeList'
 
 const App = () => (
   <div>
     <h1>Recipes</h1>
-    <RecipeList />
+    <VisibleRecipeList />
   </div>
 )
 
