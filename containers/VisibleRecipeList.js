@@ -9,7 +9,7 @@ const getVisibleRecipes = (recipes) => {
 
 const mapStateToProps = (state) => {
   return {
-    recipes: getVisibleRecipes(state)
+    recipes: getVisibleRecipes(state.recipes)
   }
 }
 

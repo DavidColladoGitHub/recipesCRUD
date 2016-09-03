@@ -8,3 +8,10 @@ export const addRecipe = (name, steps, ingredients) => {
     ingredients,
   }
 }
+
+export const addIngredient = (ingredient) => {
+  return {
+    type: 'ADD_INGREDIENT',
+    ingredients,
+  }
+}

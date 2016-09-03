@@ -3,13 +3,13 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import recipes from './reducers/recipe-reducer'
+import recipeApp from './reducers/index'
 import App from './components/App'
-import CreateRecipe from './components/CreateRecipe'
+import AddRecipe from './containers/AddRecipe'
 import VisibleRecipeList from './containers/VisibleRecipeList'
 import data from './mockData'
 
-let store = createStore(recipes)
+let store = createStore(recipeApp)
 
 data(store);
 
@@ -18,8 +18,8 @@ render((
   <Provider store={store}>
   <Router history={hashHistory}>
     <Route path="/" component={App}/>
-    <IndexRoute component={CreateRecipe} />
-    <Route path="/create" component={CreateRecipe}/>
+    <IndexRoute component={AddRecipe} />
+    <Route path="/add" component={AddRecipe}/>
     <Route path="/recipes" component={VisibleRecipeList}/>
   </Router>
   </Provider>
