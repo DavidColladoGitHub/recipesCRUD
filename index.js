@@ -14,15 +14,14 @@ let store = createStore(recipes)
 data(store);
 
 
-render(
+render((
   <Provider store={store}>
   <Router history={hashHistory}>
-       <Route path="/" component={App}>
-         <IndexRoute component={VisibleRecipeList}></IndexRoute>
-         <Route path="create" component={CreateRecipe}></Route>
-         <Route path="recipes" component={VisibleRecipeList}></Route>
-       </Route>
-    </Router>
-  </Provider>,
-  document.getElementById('root')
+    <Route path="/" component={App}/>
+    <IndexRoute component={CreateRecipe} />
+    <Route path="/create" component={CreateRecipe}/>
+    <Route path="/recipes" component={VisibleRecipeList}/>
+  </Router>
+  </Provider>
+), document.getElementById('app')
 )

@@ -6,8 +6,8 @@ const App = () => (
   <div>
     <h1>Recipes</h1>
     <footer>
-      <Link className="btn btn-success" to="recipes">See recipes</Link>
-      <Link className="btn btn-success" to="create">Create recipe</Link>
+      <Link className="btn btn-success" to="/recipes">See recipes</Link>
+      <Link className="btn btn-success" to="/create">Create recipe</Link>
     </footer>
   </div>
 )

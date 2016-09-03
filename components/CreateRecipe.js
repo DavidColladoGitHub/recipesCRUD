@@ -2,7 +2,16 @@ import React from 'react'
 
 const CreateRecipe = () => (
   <div>
-    WIP
+    <label>WIP</label>
+    <label>WIP</label>
+    <label>WIP</label>
+    <label>WIP</label>
+    <label>WIP</label>
+    <label>WIP</label>
+    <label>WIP</label>
+    <label>WIP</label>
+    <label>WIP</label>
+    <label>WIP</label>
   </div>
 )
 
