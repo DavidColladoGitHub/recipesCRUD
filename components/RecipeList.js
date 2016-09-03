@@ -1,7 +1,9 @@
 import React from 'react'
 import Recipe from './recipe'
+import { Link } from 'react-router'
 
 const RecipeList = ({ recipes, onRecipeClick }) => (
+<div>
   <ul>
     {recipes.map(recipe =>
       <Recipe
@@ -11,6 +13,8 @@ const RecipeList = ({ recipes, onRecipeClick }) => (
       />
     )}
   </ul>
+  <Link to="create">Create recipe</Link>
+  </div>
 )
 
 export default RecipeList

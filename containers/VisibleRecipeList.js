@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onRecipeClick: (id) => {
-      dispatch(toggleRecipe(id))
+      dispatch(seeRecipeDetails(id))
     }
   }
 }
