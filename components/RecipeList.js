@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import Recipe from './recipe'
 
-const RecipeList = ({ recipe, onRecipeClick }) => (
+const RecipeList = ({ recipes, onRecipeClick }) => (
   <ul>
-    {recipe.map(recipe =>
+    {recipes.map(recipe =>
       <Recipe
         key={recipe.id}
         {...recipe}

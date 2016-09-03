@@ -3,6 +3,7 @@ const recipe = (state = {}, action) => {
     case 'ADD_RECIPE':
       return {
         id: action.id,
+        name: action.name,
         steps: action.steps,
         ingredients: action.ingredients
       }
@@ -12,4 +13,16 @@ const recipe = (state = {}, action) => {
   }
 }
 
-export default recipe
+const recipes = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_RECIPE':
+      return [
+        ...state,
+        recipe(undefined, action)
+      ]
+    default:
+      return state
+  }
+}
+
+export default recipes
