@@ -9,8 +9,8 @@ function data(store) {
   )
 
   // Dispatch some actions
-  store.dispatch(addRecipe("Receta 1", ["Step 1", "Step 2"], [{name: "Ingredient 1", quantity: 1}]));
-  store.dispatch(addRecipe("Receta 2", ["Step 1", "Step 2"], [{name: "Ingredient 2", quantity: 1}]));
+  store.dispatch(addRecipe("Receta 1", [{text: "Step 1"}, {text: "Step 2"}], [{name: "Ingredient 1", quantity: 1}]));
+  store.dispatch(addRecipe("Receta 2", [{text: "Step 1"}, {text: "Step 2"}], [{name: "Ingredient 1", quantity: 1}]));
   //store.dispatch(addRecipe({steps: ["Step 1", "Step 2"], ingredients: [{name: "Ingredient 2", quantity: 1}]})
 }
 

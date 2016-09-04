@@ -1,19 +1,22 @@
 import React from 'react'
 
-const StepsListView = ({ steps }) => (
+const StepsListView = ({ steps, onSubmit }) => (
 <div>
-<row>
-  <div className="col-sm-6">
+<form onSubmit={e => {
+      e.preventDefault()
 
-  </div>
-  <div className="col-sm-6">
+      let text = document.getElementById("step").value;
 
-  </div>
-</row>
+      onSubmit(text)
+    }}>
+
+    <textarea rows="4" cols="50" id="step"></textarea> <button className="btn btn-success"> Add </button>
+
+</form>
   <ul>
     {steps.map(step =>
       <li>
-        <label> {step} </label>
+        <label> {step.text} </label>
       </li>
     )}
   </ul>

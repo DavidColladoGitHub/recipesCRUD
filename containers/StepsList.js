@@ -1,5 +1,6 @@
 import StepsListView from '../components/StepsListView'
 import { connect } from 'react-redux'
+import { addStep } from '../actions/recipe-actions';
 
 
 const mapStateToProps = (state) => {
@@ -10,7 +11,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onSubmit: (step) => {
       dispatch(addStep(step))
-      console.log(this.context.redux.getState())
     }
   }
 }

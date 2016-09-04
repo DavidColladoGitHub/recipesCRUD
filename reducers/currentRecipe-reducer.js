@@ -12,19 +12,41 @@ const ingredient = (state, action) => {
   }
 }
 
+const step = (state, action) => {
+  switch (action.type) {
+    case 'ADD_STEP':
+      return {
+        text: action.text
+      }
+
+    default:
+      return state
+  }
+}
+
 const currentRecipe = (state = {name: "", ingredients: [], steps: []}, action) => {
   switch (action.type) {
     case 'ADD_INGREDIENT':
       return {
+          steps: state.steps,
           ingredients: [
           ...state.ingredients,
           ingredient(undefined, action)
         ]
       }
 
-    default:
-      return state
-  }
+  case 'ADD_STEP':
+    return {
+        ingredients: state.ingredients,
+        steps: [
+        ...state.steps,
+        step(undefined, action)
+      ]
+    }
+
+  default:
+    return state
+}
 }
 
 export default currentRecipe

@@ -1,6 +1,6 @@
 import React from 'react'
 import IngredientsList from '../containers/IngredientsList'
-//import StepsList from '../containers/StepsList'
+import StepsList from '../containers/StepsList'
 import addIngredient from '../actions/recipe-actions'
 
 var tempRecipe = {};
@@ -8,7 +8,14 @@ class AddRecipeForm extends React.Component {
 render () {
   return (
     <div className="container">
-    < IngredientsList />
+    <row>
+      <div className="col-sm-6">
+        <IngredientsList />
+      </div>
+      <div className="col-sm-6">
+        <StepsList />
+      </div>
+    </row>
     <form onSubmit={e => {
           e.preventDefault()
 

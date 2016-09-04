@@ -16,3 +16,10 @@ export const addIngredient = (name, quantity) => {
     quantity,
   }
 }
+
+export const addStep = (text) => {
+  return {
+    type: 'ADD_STEP',
+    text,
+  }
+}

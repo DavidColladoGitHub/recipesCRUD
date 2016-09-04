@@ -10,16 +10,14 @@ const IngredientsList = ({ ingredients, onSubmit }) => (
 
       onSubmit(name, quantity)
     }}>
-<row>
-  <div className="col-sm-6">
+
   <input id="name" /> <input id="quantity" /> <button className="btn btn-success"> Add </button>
-  </div>
-</row>
+
 </form>
   <ul>
     {ingredients.map(ingredient =>
       <li>
-        <label> {ingredient.name} </label>
+        <label> {ingredient.name} / {ingredient.quantity} </label>
       </li>
     )}
   </ul>
