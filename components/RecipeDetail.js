@@ -1,9 +1,12 @@
 import React from 'react'
+import getRecipe from "../actions/recipe-actions"
 
-const RecipeDetail = ({ recipe }) => (
-<div>
-    <label>recipe.name</label>
-</div>
-)
+var RecipeDetail = React.createClass({
+  render() {
+    return <div>
+        <label>{this.props.name}</label>
+    </div>
+  }
+});
 
 export default RecipeDetail

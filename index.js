@@ -5,6 +5,7 @@ import { createStore } from 'redux'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import recipeApp from './reducers/index'
 import App from './components/App'
+import RecipeDetailContainer from './containers/RecipeDetailContainer'
 import AddRecipe from './containers/AddRecipe'
 import VisibleRecipeList from './containers/VisibleRecipeList'
 import data from './mockData'
@@ -21,6 +22,7 @@ render((
     <IndexRoute component={AddRecipe} />
     <Route path="/add" component={AddRecipe}/>
     <Route path="/recipes" component={VisibleRecipeList}/>
+    <Route path="/detail/:id" component={RecipeDetailContainer}/>
   </Router>
   </Provider>
 ), document.getElementById('app')

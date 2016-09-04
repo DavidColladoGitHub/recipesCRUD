@@ -1,0 +1,45 @@
+.list {
+  list-style: none;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+}
+
+.noPadding {
+  padding: 0px;
+}
+
+.buttons {
+  margin: 0 auto 0 auto;
+  width: 500px;
+
+}
+
+.margin5 {
+  margin: 15px;
+}
+
+.customButton {
+  height: 60px;
+  width: 200px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.listLabel {
+  font-size: 24px;
+  font-weight: bold;
+  height: 80px;
+  width: 90%;
+  background: #eee;
+  margin: 10px;
+  padding: 10px;
+}
+
+.btnAddRecipe {
+  margin-left: 50px;
+  margin-top: 20px;
+}

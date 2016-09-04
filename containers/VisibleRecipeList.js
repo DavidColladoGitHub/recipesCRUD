@@ -13,10 +13,11 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onRecipeClick: (id) => {
-      dispatch(seeRecipeDetails(id))
+      //dispatch(seeRecipeDetails(id))
+      ownProps.history.push('/detail/' + id);
     }
   }
 }

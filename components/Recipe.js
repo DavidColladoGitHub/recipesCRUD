@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Recipe = ({ onClick, name, ingredients, quantity }) => (
-  <li onClick={onClick}>
-    {name}
-  </li>
-)
+var Recipe = React.createClass({
+  render () { return <div className="listLabel" onClick={this.props.onClick}>
+    {this.props.name}
+    </div>
+  }
+})
 
 export default Recipe

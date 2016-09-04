@@ -1,4 +1,4 @@
-let recipeId = 0
+let recipeId = 1
 export const addRecipe = (name, steps, ingredients) => {
   return {
     type: 'ADD_RECIPE',

@@ -3,12 +3,14 @@ import VisibleRecipeList from '../containers/VisibleRecipeList'
 import { Link } from 'react-router'
 
 const App = () => (
-  <div>
-    <h1>Recipes</h1>
-    <footer>
-      <Link className="btn btn-success" to="/recipes">See recipes</Link>
-      <Link className="btn btn-success" to="/add">Create recipe</Link>
-    </footer>
+  <div className="container-fluid noPadding">
+  <div className="jumbotron">
+    <h1 className="title">Recipes</h1>
+  </div>
+    <div className="buttons">
+      <Link className="btn btn-success margin5 customButton" to="/recipes">See recipes</Link>
+      <Link className="btn btn-success margin5 customButton" to="/add">Create recipe</Link>
+    </div>
   </div>
 )
 
