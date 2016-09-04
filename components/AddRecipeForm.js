@@ -7,27 +7,29 @@ var tempRecipe = {};
 class AddRecipeForm extends React.Component {
 render () {
   return (
+    <div>
+    <div className = "jumbotron">
+      <h1 className="title"> Create recipe</h1>
+    </div>
     <div className="container">
-    <row>
+    <input id="recipeName" />
+    <div className="row">
       <div className="col-sm-6">
         <IngredientsList />
       </div>
       <div className="col-sm-6">
         <StepsList />
       </div>
-    </row>
+    </div>
     <form onSubmit={e => {
           e.preventDefault()
 
-          if (!input.value.trim()) {
-            return
-          }
-
-          onSubmit(tempRecipe.name, tempRecipe.steps, tempRecipe.ingredients)
+          this.props.onSubmit(document.getElementById("recipeName").value, this.props.currentRecipe)
         }}>
 
-      <button type="submit" className="btn btn-success right"> Add </button>
+      <button type="submit" className="btn btn-success"> Add </button>
       </form>
+    </div>
     </div>
   )
 }

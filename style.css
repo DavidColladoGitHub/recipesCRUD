@@ -43,3 +43,11 @@
   margin-left: 50px;
   margin-top: 20px;
 }
+
+.ingredientsContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 300px;
+  min-width: 80%;
+  border: solid 1px black;
+}

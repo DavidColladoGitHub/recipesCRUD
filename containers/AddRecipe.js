@@ -2,15 +2,20 @@ import  AddRecipeForm from '../components/AddRecipeForm';
 import { connect } from 'react-redux';
 import { addRecipe } from '../actions/recipe-actions';
 
+const mapStateToProps = (state) => {
+  return {
+    currentRecipe: state.currentRecipe
+  }
+}
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSubmit: (name, steps, ingredients) => {
-      dispatch(addRecipe(name, steps, ingredients))
+    onSubmit: (name, currentRecipe) => {
+      dispatch(addRecipe(name, currentRecipe.steps, currentRecipe.ingredients))
     }
   }
 }
 
-let AddRecipe = connect(null, mapDispatchToProps)(AddRecipeForm)
+let AddRecipe = connect(mapStateToProps, mapDispatchToProps)(AddRecipeForm)
 
 export default AddRecipe

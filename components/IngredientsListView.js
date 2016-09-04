@@ -11,9 +11,10 @@ const IngredientsList = ({ ingredients, onSubmit }) => (
       onSubmit(name, quantity)
     }}>
 
-  <input id="name" /> <input id="quantity" /> <button className="btn btn-success"> Add </button>
+  <input id="name" placeholder="Ingredient" /> <input id="quantity" placeholder="Quantity" /> <button className="btn btn-success"> Add </button>
 
 </form>
+  <div className="ingredientsContainer">
   <ul>
     {ingredients.map(ingredient =>
       <li>
@@ -21,6 +22,7 @@ const IngredientsList = ({ ingredients, onSubmit }) => (
       </li>
     )}
   </ul>
+  </div>
   </div>
 )
 

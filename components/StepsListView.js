@@ -13,6 +13,7 @@ const StepsListView = ({ steps, onSubmit }) => (
     <textarea rows="4" cols="50" id="step"></textarea> <button className="btn btn-success"> Add </button>
 
 </form>
+<div className="ingredientsContainer">
   <ul>
     {steps.map(step =>
       <li>
@@ -20,6 +21,7 @@ const StepsListView = ({ steps, onSubmit }) => (
       </li>
     )}
   </ul>
+  </div>
   </div>
 )
 
