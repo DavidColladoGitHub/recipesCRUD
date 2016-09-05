@@ -8,15 +8,21 @@ const StepsListView = ({ steps, onSubmit }) => (
       let text = document.getElementById("step").value;
 
       onSubmit(text)
+
+      document.getElementById("step").value = "";
     }}>
 
-    <textarea rows="4" cols="50" id="step"></textarea> <button className="btn btn-success"> Add </button>
+    <div className="form-group">
+      <label>Steps:</label>
+      <textarea className="form-control" rows="4" cols="50" id="step"></textarea>
+      <button className="btn btn-success"> Add </button>
+    </div>
 
 </form>
 <div className="ingredientsContainer">
   <ul>
-    {steps.map(step =>
-      <li>
+    {steps.map((step, index) =>
+      <li key={index}>
         <label> {step.text} </label>
       </li>
     )}

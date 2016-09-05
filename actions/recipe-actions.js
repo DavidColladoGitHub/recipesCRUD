@@ -23,3 +23,9 @@ export const addStep = (text) => {
     text,
   }
 }
+
+export const emptyCurrentRecipe = () => {
+  return {
+    type: 'EMPTY_RECIPE'
+  }
+}

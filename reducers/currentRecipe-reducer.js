@@ -44,6 +44,13 @@ const currentRecipe = (state = {name: "", ingredients: [], steps: []}, action) =
       ]
     }
 
+    case 'EMPTY_RECIPE':
+      return {
+          name: "",
+          ingredients: [],
+          steps: []
+      }
+
   default:
     return state
 }

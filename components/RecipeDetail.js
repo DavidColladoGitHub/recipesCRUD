@@ -12,9 +12,9 @@ var RecipeDetail = React.createClass({
           <div className="col-sm-6">
             <div className="ingredientsContainer">
               <ul>
-                {this.props.ingredients.map(ingredient =>
-                  <li>
-                    <label> {ingredient.name} / {ingredient.quantity} </label>
+                {this.props.ingredients.map((ingredient, index) =>
+                  <li key={index}>
+                    <label > {ingredient.name} / {ingredient.quantity} </label>
                   </li>
                 )}
               </ul>
@@ -23,9 +23,9 @@ var RecipeDetail = React.createClass({
               <div className="col-sm-6">
               <div className="ingredientsContainer">
                 <ul>
-                  {this.props.steps.map(step =>
-                    <li>
-                      <label> {step.text} </label>
+                  {this.props.steps.map((step, index) =>
+                    <li key={index}>
+                      <label > {step.text} </label>
                     </li>
                   )}
                 </ul>

@@ -13,18 +13,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onRecipeClick: (id) => {
-      //dispatch(seeRecipeDetails(id))
-      ownProps.history.push('/detail/' + id);
-    }
-  }
-}
-
 const VisibleRecipeList = connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(RecipeList)
 
 export default VisibleRecipeList

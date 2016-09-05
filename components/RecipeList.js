@@ -3,6 +3,9 @@ import Recipe from './recipe'
 import { Link } from 'react-router'
 
 var RecipeList = React.createClass({
+navigate(id) {
+  this.context.router.push("/detail/"+ id)
+},
 render() {
    return <div>
    <div className="jumbotron">
@@ -10,12 +13,12 @@ render() {
    </div>
    <div className="container">
     <ul className="list">
-      {this.props.recipes.map(recipe =>
-        <li>
+      {this.props.recipes.map((recipe, index) =>
+        <li key={index}>
         <Recipe
           key={recipe.id}
           {...recipe}
-          onClick={() => this.props.onRecipeClick(recipe.id)}
+          onClick={() => this.navigate(recipe.id)}
         />
         </li>
       )}
@@ -23,6 +26,9 @@ render() {
   <Link to="/add" className="btn btn-success btnAddRecipe">Create recipe</Link>
   </div>
   </div>
+},
+contextTypes: {
+    router: React.PropTypes.object.isRequired
 }
 });
 

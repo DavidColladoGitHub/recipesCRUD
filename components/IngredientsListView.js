@@ -9,15 +9,23 @@ const IngredientsList = ({ ingredients, onSubmit }) => (
       let quantity = document.getElementById("quantity").value;
 
       onSubmit(name, quantity)
+
+      document.getElementById("name").value = "";
+      document.getElementById("quantity").value = "";
     }}>
 
-  <input id="name" placeholder="Ingredient" /> <input id="quantity" placeholder="Quantity" /> <button className="btn btn-success"> Add </button>
+    <div className="form-group">
+      <input id="name" placeholder="Ingredient" className="form-control"/>
+      <input id="quantity" placeholder="Quantity" className="form-control"/>
+      <button className="btn btn-success"> Add </button>
+    </div>
+
 
 </form>
   <div className="ingredientsContainer">
   <ul>
-    {ingredients.map(ingredient =>
-      <li>
+    {ingredients.map((ingredient, index) =>
+      <li key={index}>
         <label> {ingredient.name} / {ingredient.quantity} </label>
       </li>
     )}

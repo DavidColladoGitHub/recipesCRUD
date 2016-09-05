@@ -14,7 +14,10 @@ render () {
       <h1 className="title"> Create recipe</h1>
     </div>
     <div className="container">
-    <input id="recipeName" />
+    <div className="form-group">
+      <label>Recipe Name:</label>
+      <input type="text" className="form-control" id="recipeName" />
+    </div>
     <div className="row">
       <div className="col-sm-5">
         <IngredientsList />
@@ -28,6 +31,7 @@ render () {
           e.preventDefault()
 
           this.props.onSubmit(document.getElementById("recipeName").value, this.props.currentRecipe)
+          document.getElementById("recipeName").value = "";
         }}>
 
           <button type="submit" className="btn btn-success"> Add Recipe </button>

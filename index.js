@@ -19,7 +19,6 @@ render((
   <Provider store={store}>
   <Router history={hashHistory}>
     <Route path="/" component={App}/>
-    <IndexRoute component={AddRecipe} />
     <Route path="/add" component={AddRecipe}/>
     <Route path="/recipes" component={VisibleRecipeList}/>
     <Route path="/detail/:id" component={RecipeDetailContainer}/>
