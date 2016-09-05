@@ -11,8 +11,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onSubmit: (name, currentRecipe) => {
-      dispatch(addRecipe(name, currentRecipe.steps, currentRecipe.ingredients))
-      dispatch(emptyCurrentRecipe())
+        dispatch(addRecipe(name, currentRecipe.steps, currentRecipe.ingredients))
+        dispatch(emptyCurrentRecipe())
     }
   }
 }

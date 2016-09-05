@@ -14,11 +14,19 @@ const IngredientsList = ({ ingredients, onSubmit }) => (
       document.getElementById("quantity").value = "";
     }}>
 
-    <div className="form-group">
-      <input id="name" placeholder="Ingredient" className="form-control"/>
-      <input id="quantity" placeholder="Quantity" className="form-control"/>
-      <button className="btn btn-success"> Add </button>
-    </div>
+<div className = "row">
+  <div className="col-sm-10">
+      <div className="form-group">
+        <label>Ingredient: </label>
+        <input id="name" placeholder="Ingredient" className="form-control"/>
+        <label>Quantity: </label>
+        <input id="quantity" placeholder="Quantity" className="form-control"/>
+      </div>
+  </div>
+  <div className="col-sm-2">
+  <button className="btn btn-success bottomright"> Add </button>
+  </div>
+</div>
 
 
 </form>

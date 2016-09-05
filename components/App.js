@@ -10,7 +10,7 @@ var App = React.createClass ({
         <h1 className="title">Recipes</h1>
       </div>
         <div className="buttons">
-          <Link className="btn btn-success margin5 customButton" to="/recipes">See recipes</Link>
+          <Link className="btn btn-success margin5 customButton" to="/recipes">Recipe list</Link>
           <Link className="btn btn-success margin5 customButton" to="/add">Create recipe</Link>
         </div>
     </div>

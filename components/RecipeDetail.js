@@ -33,7 +33,7 @@ var RecipeDetail = React.createClass({
               </div>
             </div>
             <div className="buttons">
-              <Link className="btn btn-success margin5 customButton" to="/recipes">See recipes</Link>
+              <Link className="btn btn-success margin5 customButton" to="/recipes">Recipe list</Link>
               <Link className="btn btn-success margin5 customButton" to="/add">Create recipe</Link>
             </div>
     </div>
