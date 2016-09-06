@@ -1,5 +1,7 @@
 # recipesCRUD
 
+First of all, you need to have installed npm and webpack-dev-server (globally)
+
 Steps to run the app: 
 
 1) Download the folder with the app.
